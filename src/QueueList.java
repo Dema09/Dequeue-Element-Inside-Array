@@ -13,6 +13,46 @@ public class QueueList {
         this.queueList = queueList;
     }
 
+    public List<String> initArray(int numberOfArray){
+        char alphabet = 'a';
+        int asciiValueForAlphabet = (int) alphabet;
+        int counterForAlphabet = 0;
+
+
+        List<String> queueListString = new ArrayList<>();
+
+        char number = '1';
+        int asciiValueForNumber = (int) number;
+
+        for(int i = 0; i<numberOfArray; i++){
+                if (numberOfArray % 2 == 0) {
+                    if(counterForAlphabet % numberOfArray != numberOfArray / 2) {
+
+                        char asciiToCharForAlphabet = (char) asciiValueForAlphabet;
+                        queueListString.add(Character.toString(asciiToCharForAlphabet));
+
+                        asciiValueForAlphabet++;
+                        counterForAlphabet++;
+                    }else{
+
+                            char asciiToCharForNumber =  (char) asciiValueForNumber;
+                            queueListString.add(Character.toString(asciiToCharForNumber));
+                            asciiValueForNumber++;
+                    }
+                }else{
+                        if (asciiValueForNumber > 47 && asciiValueForNumber < 58){
+                            char asciiToCharForNumber = (char) asciiValueForNumber;
+                            queueListString.add(Character.toString(asciiToCharForNumber));
+                            asciiValueForNumber++;
+                        }
+                        else{
+                            break;
+                        }
+                    }
+                }
+        return queueListString;
+    }
+
     public List<String> dequeueList() {
         List<String> newListString = new ArrayList<>();
 
