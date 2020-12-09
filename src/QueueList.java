@@ -18,9 +18,7 @@ public class QueueList {
         int asciiValueForAlphabet = (int) alphabet;
         int counterForAlphabet = 0;
 
-
         List<String> queueListString = new ArrayList<>();
-
         char number = '1';
         int asciiValueForNumber = (int) number;
 
