@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class main {
@@ -19,7 +17,7 @@ public class main {
             queueList.dequeueList();
 
             for(int i=0; i< queueList.getQueueList().size(); i++){
-                Thread.sleep(4000);
+                Thread.sleep(2000);
                 System.out.print(queueList.getQueueList().get(i) + " ");
 
                 if(i == queueList.getQueueList().size() - 1){

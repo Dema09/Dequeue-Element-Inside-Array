@@ -4,33 +4,22 @@ Logic:
 
 Start
 
-    Init arraySize = 0,queue[] = {}, temp = null, inputList[] = {};
+    Init arraySize = 0,queue[] = {}, temp = null, inputList[] = {}; (Initialize variables for dequeuing)
+    Init beginningChar = 'a', beginningNumber = '1'; (Initialize variables for set the elements of array)
+    Init counterForAlphabet = 0, counterForNumber = 0; (Initialize variables for counting the amount of alphabet, and number)
     
     Input arraySize
     
     Loop until less than arraySize
        
-        Input queue[arraySize]
-        SET inputList equals to queue[arraySize]
+        If arraySize % 2 equals to 0, THEN (Only if the number of array is EVEN)
+        
+        //This validation is for splitting the initialization between Alphabet, and number into half based on numberArray
+            If counterAlphabet Is NOT EQUALS THAN half of the numberArray 
+                Add beginningCharacter   
         
     EndLoop
-    
-    If arraySize % 2 equals to 0, THEN
-        Loop inputList until the end of index
-            If inputList isn't contains alpha-numeric, THEN
-                print "Input must be an alpha-numeric!"
-            EndIf
-        EndLoop
-    EndIf 
-    
-    If arraySize % 2 isn't equals to 0, THEN
-        Loop inputList until the end of index
-            If inputList isn't contains numeric, THEN
-                print "Input must be a numeric!"
-            EndIf
-        EndLoop
-    EndIf
-    
+       
     //to dequeued the elements
     
     Init currentIndex = 0;
